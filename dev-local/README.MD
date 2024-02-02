@@ -61,3 +61,13 @@ kafka-topics --bootstrap-server localhost:9092 --describe --topic _schemas
 
 ============================================
 control center : http://localhost:9021/clusters
+
+swagger: http://localhost:8090/swagger-ui/index.html
+
+{
+"id": "23",
+"firstName": "S",
+"middleName": "O",
+"lastName": "P",
+"emailId": "sop@gmail.com"
+}

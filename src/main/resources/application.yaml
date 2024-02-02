@@ -2,7 +2,7 @@ topic:
   name: avro-test-topic
 
 server:
-  port: 8181
+  port: 8090
 
 spring:
   kafka:
