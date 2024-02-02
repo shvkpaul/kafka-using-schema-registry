@@ -1,4 +1,4 @@
-package com.shvk.avro
+package com.shvk
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,4 +1,4 @@
-package com.shvk.avro
+package com.shvk
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
