@@ -58,3 +58,6 @@ kafka-topics --bootstrap-server localhost:9092 --describe
 ```
 kafka-topics --bootstrap-server localhost:9092 --describe --topic _schemas
 ```
+
+============================================
+control center : http://localhost:9021/clusters
