@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Employee extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -4805176779800886930L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Employee\",\"namespace\":\"com.shvk.dto\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"firstName\",\"type\":\"string\"},{\"name\":\"middleName\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"lastName\",\"type\":\"string\"},{\"name\":\"emailId\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"dob\",\"type\":\"string\",\"default\":\"\"}]}");
+  private static final long serialVersionUID = -6961689331759957722L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Employee\",\"namespace\":\"com.shvk.dto\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"firstName\",\"type\":\"string\"},{\"name\":\"middleName\",\"type\":\"string\",\"default\":\"\"},{\"name\":\"lastName\",\"type\":\"string\"},{\"name\":\"emailId\",\"type\":\"string\",\"default\":\"\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -76,7 +76,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    private java.lang.CharSequence middleName;
    private java.lang.CharSequence lastName;
    private java.lang.CharSequence emailId;
-   private java.lang.CharSequence dob;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -92,15 +91,13 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
    * @param middleName The new value for middleName
    * @param lastName The new value for lastName
    * @param emailId The new value for emailId
-   * @param dob The new value for dob
    */
-  public Employee(java.lang.CharSequence id, java.lang.CharSequence firstName, java.lang.CharSequence middleName, java.lang.CharSequence lastName, java.lang.CharSequence emailId, java.lang.CharSequence dob) {
+  public Employee(java.lang.CharSequence id, java.lang.CharSequence firstName, java.lang.CharSequence middleName, java.lang.CharSequence lastName, java.lang.CharSequence emailId) {
     this.id = id;
     this.firstName = firstName;
     this.middleName = middleName;
     this.lastName = lastName;
     this.emailId = emailId;
-    this.dob = dob;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -113,7 +110,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
     case 2: return middleName;
     case 3: return lastName;
     case 4: return emailId;
-    case 5: return dob;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -127,7 +123,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
     case 2: middleName = (java.lang.CharSequence)value$; break;
     case 3: lastName = (java.lang.CharSequence)value$; break;
     case 4: emailId = (java.lang.CharSequence)value$; break;
-    case 5: dob = (java.lang.CharSequence)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -218,23 +213,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
   }
 
   /**
-   * Gets the value of the 'dob' field.
-   * @return The value of the 'dob' field.
-   */
-  public java.lang.CharSequence getDob() {
-    return dob;
-  }
-
-
-  /**
-   * Sets the value of the 'dob' field.
-   * @param value the value to set.
-   */
-  public void setDob(java.lang.CharSequence value) {
-    this.dob = value;
-  }
-
-  /**
    * Creates a new Employee RecordBuilder.
    * @return A new Employee RecordBuilder
    */
@@ -280,7 +258,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
     private java.lang.CharSequence middleName;
     private java.lang.CharSequence lastName;
     private java.lang.CharSequence emailId;
-    private java.lang.CharSequence dob;
 
     /** Creates a new Builder */
     private Builder() {
@@ -313,10 +290,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
         this.emailId = data().deepCopy(fields()[4].schema(), other.emailId);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
-      if (isValidValue(fields()[5], other.dob)) {
-        this.dob = data().deepCopy(fields()[5].schema(), other.dob);
-        fieldSetFlags()[5] = other.fieldSetFlags()[5];
-      }
     }
 
     /**
@@ -344,10 +317,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       if (isValidValue(fields()[4], other.emailId)) {
         this.emailId = data().deepCopy(fields()[4].schema(), other.emailId);
         fieldSetFlags()[4] = true;
-      }
-      if (isValidValue(fields()[5], other.dob)) {
-        this.dob = data().deepCopy(fields()[5].schema(), other.dob);
-        fieldSetFlags()[5] = true;
       }
     }
 
@@ -551,46 +520,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
       return this;
     }
 
-    /**
-      * Gets the value of the 'dob' field.
-      * @return The value.
-      */
-    public java.lang.CharSequence getDob() {
-      return dob;
-    }
-
-
-    /**
-      * Sets the value of the 'dob' field.
-      * @param value The value of 'dob'.
-      * @return This builder.
-      */
-    public com.shvk.dto.Employee.Builder setDob(java.lang.CharSequence value) {
-      validate(fields()[5], value);
-      this.dob = value;
-      fieldSetFlags()[5] = true;
-      return this;
-    }
-
-    /**
-      * Checks whether the 'dob' field has been set.
-      * @return True if the 'dob' field has been set, false otherwise.
-      */
-    public boolean hasDob() {
-      return fieldSetFlags()[5];
-    }
-
-
-    /**
-      * Clears the value of the 'dob' field.
-      * @return This builder.
-      */
-    public com.shvk.dto.Employee.Builder clearDob() {
-      dob = null;
-      fieldSetFlags()[5] = false;
-      return this;
-    }
-
     @Override
     @SuppressWarnings("unchecked")
     public Employee build() {
@@ -601,7 +530,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
         record.middleName = fieldSetFlags()[2] ? this.middleName : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.lastName = fieldSetFlags()[3] ? this.lastName : (java.lang.CharSequence) defaultValue(fields()[3]);
         record.emailId = fieldSetFlags()[4] ? this.emailId : (java.lang.CharSequence) defaultValue(fields()[4]);
-        record.dob = fieldSetFlags()[5] ? this.dob : (java.lang.CharSequence) defaultValue(fields()[5]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -644,8 +572,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
 
     out.writeString(this.emailId);
 
-    out.writeString(this.dob);
-
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -663,10 +589,8 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
 
       this.emailId = in.readString(this.emailId instanceof Utf8 ? (Utf8)this.emailId : null);
 
-      this.dob = in.readString(this.dob instanceof Utf8 ? (Utf8)this.dob : null);
-
     } else {
-      for (int i = 0; i < 6; i++) {
+      for (int i = 0; i < 5; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           this.id = in.readString(this.id instanceof Utf8 ? (Utf8)this.id : null);
@@ -686,10 +610,6 @@ public class Employee extends org.apache.avro.specific.SpecificRecordBase implem
 
         case 4:
           this.emailId = in.readString(this.emailId instanceof Utf8 ? (Utf8)this.emailId : null);
-          break;
-
-        case 5:
-          this.dob = in.readString(this.dob instanceof Utf8 ? (Utf8)this.dob : null);
           break;
 
         default:

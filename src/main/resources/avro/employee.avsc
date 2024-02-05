@@ -24,11 +24,6 @@
       "name": "emailId",
       "type": "string",
       "default": ""
-    },
-    {
-      "name": "dob",
-      "type": "string",
-      "default": ""
     }
   ]
 }

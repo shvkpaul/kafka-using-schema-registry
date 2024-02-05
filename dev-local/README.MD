@@ -64,6 +64,10 @@ control center : http://localhost:9021/clusters
 
 swagger: http://localhost:8090/swagger-ui/index.html
 
+topic name : http://localhost:8081/subjects
+
+schema registry validation : http://localhost:8081/subjects/avro-test-topic-value/versions/latest
+
 {
 "id": "23",
 "firstName": "S",
